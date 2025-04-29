@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAILER PIPELINE FLOWCHART</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .pipeline {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .phase {
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .phase:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .phase-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .phase-icon {
+            font-size: 28px;
+            margin-right: 15px;
+        }
+        .phase-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .tasks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .task {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1 1 250px;
+            min-width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .task-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .task-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .task-team, .task-tool {
+            font-size: 14px;
+        }
+        .team-label, .tool-label {
+            font-weight: 600;
+            display: inline-block;
+            min-width: 50px;
+        }
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #7f8c8d;
+            margin: -15px 0;
+        }
+        .efficiency {
+            margin-top: 40px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .efficiency h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .efficiency ul {
+            padding-left: 20px;
+        }
+        .efficiency li {
+            margin-bottom: 10px;
+        }
+        
+        /* Color coding for phases */
+        .phase-1 {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+        }
+        .phase-2a {
+            background-color: #eafaf1;
+            border-left: 5px solid #2ecc71;
+        }
+        .phase-2b {
+            background-color: #fef9e7;
+            border-left: 5px solid #f1c40f;
+        }
+        .phase-3 {
+            background-color: #f9ebea;
+            border-left: 5px solid #e74c3c;
+        }
+        .phase-4 {
+            background-color: #ebf5fb;
+            border-left: 5px solid #3498db;
+        }
+        .phase-5 {
+            background-color: #eae6f7;
+            border-left: 5px solid #9b59b6;
+        }
+        .phase-6 {
+            background-color: #eafaf1;
+            border-left: 5px solid #27ae60;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tasks {
+                flex-direction: column;
+            }
+            .task {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TRAILER PIPELINE</h1>
+        
+        <div class="pipeline">
+            <!-- Phase 1 -->
+            <div class="phase phase-1">
+                <div class="phase-header">
+                    <div class="phase-icon">🧩</div>
+                    <h2 class="phase-title">Phase 1: Pre-Production</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">Story</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">Storyboard</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Comic Team
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Phase 2a -->
+            <div class="phase phase-2a">
+                <div class="phase-header">
+                    <div class="phase-icon">🎨</div>
+                    <h2 class="phase-title">Phase 2: (i) Asset Development</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">1. Modelling</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Phanindra, Pavan
+                            </div>
+                            <div class="task-team">
+                                <span class="team-label">Support:</span> Vidhi
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">2. UV Mapping</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Phanindra, Pavan
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">3. Texturing</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Phanindra, Vidhi, Pavan
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Substance Painter, Maya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">4. Shading</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Phanindra, Pavan
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Substance Painter
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">5. Grooming (Optional)</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Vidhi, Pavan, Prasit
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya (XGen)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Phase 2b -->
+            <div class="phase phase-2b">
+                <div class="phase-header">
+                    <div class="phase-icon">🏗️</div>
+                    <h2 class="phase-title">Phase 2: (ii) Scene Setup</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">6. Layout</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Phanindra, Pavan
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">7. Animatics</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Adityaa, Phanindra
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Adobe Animate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">8. Rigging</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Vidhi, Pavan
+                            </div>
+                            <div class="task-team">
+                                <span class="team-label">Support:</span> Phanindra
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Phase 3 -->
+            <div class="phase phase-3">
+                <div class="phase-header">
+                    <div class="phase-icon">🎭</div>
+                    <h2 class="phase-title">Phase 3: Animation</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">9. Animation</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Prasit, Adityaa, Vidhi, Phanindra, Pavan
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya (Exp: Blender, Unreal)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Phase 4 -->
+            <div class="phase phase-4">
+                <div class="phase-header">
+                    <div class="phase-icon">💡</div>
+                    <h2 class="phase-title">Phase 4: Lighting & Rendering</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">10. Lighting</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Pavan, Vidhi, Phanindra
+                            </div>
+                            <div class="task-team">
+                                <span class="team-label">Support:</span> Prasit, Adityaa
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">11. Rendering</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Prasit, Phanindra
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> (Options: Unreal, Red Shift Renders, Renderman)
+                            </div>
+                            <div class="task-note">
+                                Output in EXR for cross-compatibility
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Phase 5 -->
+            <div class="phase phase-5">
+                <div class="phase-header">
+                    <div class="phase-icon">💥</div>
+                    <h2 class="phase-title">Phase 5: FX & Compositing</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">12. FX</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Pavan, Prasit, Adityaa
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> (Options: Maya, Blender, After Effects)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3 class="task-title">13. Compositing</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Pavan, Vidhi
+                            </div>
+                            <div class="task-team">
+                                <span class="team-label">Support:</span> Prasit
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> Maya
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Phase 6 -->
+            <div class="phase phase-6">
+                <div class="phase-header">
+                    <div class="phase-icon">🎬</div>
+                    <h2 class="phase-title">Phase 6: Editing & Final Output</h2>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <h3 class="task-title">14. Editing</h3>
+                        <div class="task-info">
+                            <div class="task-team">
+                                <span class="team-label">Team:</span> Adityaa, Phanindra, Vidhi
+                            </div>
+                            <div class="task-tool">
+                                <span class="tool-label">Tool:</span> After Effects
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Efficiency Tips -->
+        <div class="efficiency">
+            <h2>🔁 To Increase Efficiency:</h2>
+            <ul>
+                <li><strong>Asset Naming & Versioning:</strong> Strict conventions with Git or Shotgrid (if budget permits)</li>
+                <li><strong>Interchange Format:</strong> Use FBX or Alembic for geometry/animation; EXR for rendered files</li>
+                <li><strong>Weekly Review Cycle:</strong> Peer-review in a shared drive or synced tool like Frame.io or SyncSketch</li>
+                <li><strong>File Structure:</strong> Centralized drive with folders per phase and asset, e.g., /Assets/CharacterA/Textures/</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
